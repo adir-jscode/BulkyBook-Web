@@ -25,12 +25,18 @@ namespace BulkyBookWeb.Controllers
         [HttpPost]
         public IActionResult Create(Category obj)
         {
-            if(obj.Name == obj.DisplayOrder.ToString())
+            //custom validation
+            if (obj.Name == obj.DisplayOrder.ToString())
             {
-                ModelState.AddModelError("Name", "The display order cannot exactly the same");
+                ModelState.AddModelError("name", "The display order cannot exactly the same");
             }
 
-            if(ModelState.IsValid)
+            //if (obj.Name.ToLower() == "test")
+            //{
+            //    ModelState.AddModelError("", "Test is not valid");
+            //}
+
+            if (ModelState.IsValid)
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
@@ -38,6 +44,68 @@ namespace BulkyBookWeb.Controllers
             }
             return View();
             
+        }
+
+        public IActionResult Edit(int? id)
+        {
+            if(id== null || id == 0)
+            {
+                return NotFound();
+            }
+            Category? objFormDb = _db.Categories.Find(id);
+            Category? obj2 = _db.Categories.FirstOrDefault(u=> u.Id == id);
+            Category? obj3 = _db.Categories.Where(u=>u.Id == id).FirstOrDefault();
+
+            if(objFormDb == null)
+            {
+                return NotFound();
+            }
+
+
+            return View(objFormDb);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Category obj)
+        {
+            if(ModelState.IsValid)
+            {
+                _db.Categories.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+
+            return View();
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if(id == null || id == 0)
+            {
+                return NotFound();
+            }
+            Category? ObjectFromDb = _db.Categories.FirstOrDefault(u=>u.Id == id);
+            if(ObjectFromDb == null)
+            {
+                return NotFound();
+            }
+
+
+            return View(ObjectFromDb);
+        }
+
+        [HttpPost,ActionName("Delete")]
+        public IActionResult DeletePost(Category obj)
+        {
+
+            if(ModelState.IsValid)
+            {
+                _db.Categories.Remove(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
         }
     }
 }

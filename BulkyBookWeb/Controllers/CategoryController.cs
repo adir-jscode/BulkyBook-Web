@@ -96,16 +96,18 @@ namespace BulkyBookWeb.Controllers
         }
 
         [HttpPost,ActionName("Delete")]
-        public IActionResult DeletePost(Category obj)
+        public IActionResult DeletePost(int?id)
         {
 
-            if(ModelState.IsValid)
+            Category? obj = _db.Categories.FirstOrDefault(u=>u.Id ==id);
+            if(obj == null)
             {
-                _db.Categories.Remove(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+                return NotFound();
             }
-            return View();
+
+            _db.Categories.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

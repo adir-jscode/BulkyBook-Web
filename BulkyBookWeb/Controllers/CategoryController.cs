@@ -25,6 +25,11 @@ namespace BulkyBookWeb.Controllers
         [HttpPost]
         public IActionResult Create(Category obj)
         {
+            if(obj.Name == obj.DisplayOrder.ToString())
+            {
+                ModelState.AddModelError("Name", "The display order cannot exactly the same");
+            }
+
             if(ModelState.IsValid)
             {
                 _db.Categories.Add(obj);

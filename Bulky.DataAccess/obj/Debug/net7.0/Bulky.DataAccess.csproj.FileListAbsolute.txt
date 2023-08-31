@@ -1,0 +1,5 @@
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.csproj.AssemblyReference.cache
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.AssemblyInfoInputs.cache
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.AssemblyInfo.cs
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.DataAccess\obj\Debug\net7.0\Bulky.DataAccess.csproj.CoreCompileInputs.cache

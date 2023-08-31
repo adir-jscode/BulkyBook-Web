@@ -1,0 +1,12 @@
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\bin\Debug\net7.0\Bulky.Models.deps.json
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\bin\Debug\net7.0\Bulky.Models.dll
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\bin\Debug\net7.0\Bulky.Models.pdb
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\obj\Debug\net7.0\Bulky.Models.csproj.AssemblyReference.cache
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\obj\Debug\net7.0\Bulky.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\obj\Debug\net7.0\Bulky.Models.AssemblyInfoInputs.cache
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\obj\Debug\net7.0\Bulky.Models.AssemblyInfo.cs
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\obj\Debug\net7.0\Bulky.Models.csproj.CoreCompileInputs.cache
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\obj\Debug\net7.0\Bulky.Models.dll
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\obj\Debug\net7.0\refint\Bulky.Models.dll
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\obj\Debug\net7.0\Bulky.Models.pdb
+D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Models\obj\Debug\net7.0\ref\Bulky.Models.dll

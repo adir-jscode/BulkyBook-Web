@@ -10,3 +10,15 @@ D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Utility\obj\Debug\net7.0\Bulky.
 D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Utility\obj\Debug\net7.0\refint\Bulky.Utility.dll
 D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.pdb
 D:\Semester\ASP.NET CORE Project\BulkyBook\Bulky.Utility\obj\Debug\net7.0\ref\Bulky.Utility.dll
+D:\BulkyBook-Web\Bulky.Utility\bin\Debug\net7.0\Bulky.Utility.deps.json
+D:\BulkyBook-Web\Bulky.Utility\bin\Debug\net7.0\Bulky.Utility.dll
+D:\BulkyBook-Web\Bulky.Utility\bin\Debug\net7.0\Bulky.Utility.pdb
+D:\BulkyBook-Web\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.csproj.AssemblyReference.cache
+D:\BulkyBook-Web\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.GeneratedMSBuildEditorConfig.editorconfig
+D:\BulkyBook-Web\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.AssemblyInfoInputs.cache
+D:\BulkyBook-Web\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.AssemblyInfo.cs
+D:\BulkyBook-Web\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.csproj.CoreCompileInputs.cache
+D:\BulkyBook-Web\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.dll
+D:\BulkyBook-Web\Bulky.Utility\obj\Debug\net7.0\refint\Bulky.Utility.dll
+D:\BulkyBook-Web\Bulky.Utility\obj\Debug\net7.0\Bulky.Utility.pdb
+D:\BulkyBook-Web\Bulky.Utility\obj\Debug\net7.0\ref\Bulky.Utility.dll

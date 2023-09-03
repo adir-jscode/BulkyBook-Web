@@ -39,7 +39,7 @@
             {
             <tr>
                 <td>
-                        @obj.Id
+                    @obj.CategoryId
                 </td>
                 <td>
                         @obj.Name
@@ -48,10 +48,10 @@
                     @obj.DisplayOrder
                 </td>
                 <td>
-                    <a asp-controller="Category" asp-action="Edit" asp-route-Id = "@obj.Id" class="btn btn-primary">
+                    <a asp-controller="Category" asp-action="Edit" asp-route-Id="@obj.CategoryId" class="btn btn-primary">
                         <i class="bi bi-pencil-square"></i> Edit
                     </a>
-                    <a asp-controller="Category" asp-action="Delete" asp-route-Id="@obj.Id" class="btn btn-danger">
+                    <a asp-controller="Category" asp-action="Delete" asp-route-Id="@obj.CategoryId" class="btn btn-danger">
                         <i class="bi bi-trash"></i> Delete
                     </a>
                 </td>

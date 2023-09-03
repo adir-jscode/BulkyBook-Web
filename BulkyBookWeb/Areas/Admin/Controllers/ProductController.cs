@@ -56,7 +56,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            Product? objFormDb = _unitOfWork.Product.Get(u => u.Id == id);
+            Product? objFormDb = _unitOfWork.Product.Get(u => u.CategoryId == id);
             //Product? obj2 = _db.Categories.FirstOrDefault();
             //Product? obj3 = _db.Categories.Where(u=>u.Id == id).FirstOrDefault();
 
@@ -90,7 +90,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            Product? ObjectFromDb = _unitOfWork.Product.Get(u => u.Id == id);
+            Product? ObjectFromDb = _unitOfWork.Product.Get(u => u.CategoryId == id);
             if (ObjectFromDb == null)
             {
                 return NotFound();
@@ -104,7 +104,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         public IActionResult DeletePost(int? id)
         {
 
-            Product? obj = _unitOfWork.Product.Get(u => u.Id == id);
+            Product? obj = _unitOfWork.Product.Get(u => u.CategoryId == id);
             if (obj == null)
             {
                 return NotFound();

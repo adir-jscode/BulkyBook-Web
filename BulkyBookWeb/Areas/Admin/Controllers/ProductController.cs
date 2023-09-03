@@ -3,6 +3,10 @@ using Bulky.Models;
 using BulkyBookWeb.Repository;
 using BulkyBookWeb.Repository.IRepository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BulkyBookWeb.Areas.Admin.Controllers
 {
@@ -17,6 +21,14 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         public IActionResult Index()
         {
             List<Product> objList = _unitOfWork.Product.GetAll().ToList();
+            IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().Select(u =>
+            
+                new SelectListItem
+                {
+                Text = u.Name,
+                Value = u.CategoryId.ToString()
+                }
+                );
 
             return View(objList);
         }

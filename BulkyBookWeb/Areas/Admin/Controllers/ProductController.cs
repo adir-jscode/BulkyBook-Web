@@ -15,9 +15,11 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public ProductController(IUnitOfWork db)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public ProductController(IUnitOfWork db, IWebHostEnvironment webHostEnvironment)
         {
             _unitOfWork = db;
+            _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index()
         {
@@ -90,7 +92,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
 
 
         [HttpPost]
-        public IActionResult Create(ProductVM productVM)
+        public IActionResult Create(ProductVM productVM, IFormFile? file)
         {
             //custom validation
             //if (obj.Name == obj.DisplayOrder.ToString())
@@ -103,8 +105,25 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             //    ModelState.AddModelError("", "Test is not valid");
             //}
 
+
+
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+                if (file != null)
+                {
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    string productPath = Path.Combine(wwwRootPath, @"images\product");
+                    using (var FileSteam = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
+                    {
+                        file.CopyTo(FileSteam);
+                    }
+
+                    productVM.Product.ImageUrl = @"\images\product\" + fileName;
+                }
+
+                
+
                 _unitOfWork.Product.Add(productVM.Product);
                 _unitOfWork.Save();
                 TempData["success"] = "Product Added Successfully";
@@ -118,7 +137,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
                     Value = u.CategoryId.ToString()
                 });
 
-                return View(productVM);
+                return RedirectToAction("Index");
             }
            
 

@@ -33,7 +33,28 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
 
             return View(objList);
         }
-        public IActionResult Create()
+        //public IActionResult Create()
+        //{
+        //    IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+        //    {
+        //        Text = u.Name,
+        //        Value = u.CategoryId.ToString()
+        //    });
+
+        //    //ViewBag.CategoryList = CategoryList;
+        //    ViewData["CategoryList"] = CategoryList;
+
+        //    ProductVM productVM = new()
+        //    {
+        //        CategoryList = CategoryList,
+        //        Product = new Product()
+        //    };
+        //    return View(productVM);
+        //}
+
+        //working with upsert
+
+        public IActionResult Upsert(int?id)
         {
             IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
             {
@@ -41,16 +62,32 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
                 Value = u.CategoryId.ToString()
             });
 
-            //ViewBag.CategoryList = CategoryList;
-            ViewData["CategoryList"] = CategoryList;
-
             ProductVM productVM = new()
             {
                 CategoryList = CategoryList,
                 Product = new Product()
             };
-            return View(productVM);
+
+            if(id == null || id ==0)
+            {
+                //create
+                return View(productVM);
+            }
+
+            else
+            {
+                //update
+
+                productVM.Product = _unitOfWork.Product.Get(u=>u.ProductId == id);
+                return View(productVM);
+            }
+
+           
         }
+
+
+
+
 
         [HttpPost]
         public IActionResult Create(ProductVM productVM)

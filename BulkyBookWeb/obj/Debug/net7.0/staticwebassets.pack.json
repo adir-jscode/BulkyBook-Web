@@ -25,10 +25,6 @@
       "PackagePath": "staticwebassets\\images\\product\\5ccd1fa7-7094-49e6-af83-31712e445188.jpg"
     },
     {
-      "Id": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\images\\product\\6e24c34b-4624-4cb4-86fc-fcbce083f547.jpg",
-      "PackagePath": "staticwebassets\\images\\product\\6e24c34b-4624-4cb4-86fc-fcbce083f547.jpg"
-    },
-    {
       "Id": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\images\\product\\7f24ce7b-5b37-4969-953a-dadbe51b59cc.jpg",
       "PackagePath": "staticwebassets\\images\\product\\7f24ce7b-5b37-4969-953a-dadbe51b59cc.jpg"
     },
@@ -43,6 +39,10 @@
     {
       "Id": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\images\\product\\eb4ab1cc-411f-4200-967b-b7e08e54e0a7.jpg",
       "PackagePath": "staticwebassets\\images\\product\\eb4ab1cc-411f-4200-967b-b7e08e54e0a7.jpg"
+    },
+    {
+      "Id": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\js\\product.js",
+      "PackagePath": "staticwebassets\\js\\product.js"
     },
     {
       "Id": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\js\\site.js",

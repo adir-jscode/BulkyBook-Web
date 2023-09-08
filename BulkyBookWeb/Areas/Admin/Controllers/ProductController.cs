@@ -221,5 +221,38 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
             TempData["success"] = "Product Deleted Successfully";
             return RedirectToAction("Index");
         }
+
+
+        #region APICALLS
+
+        public IActionResult GetAll()
+        {
+            List<Product> objList = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
+            return Json(new {data = objList});
+        }
+
+        [HttpDelete]
+        public IActionResult Remove(int?id)
+        {
+            Product ProductToBeDeleted = _unitOfWork.Product.Get(u => u.ProductId == id);
+            if(ProductToBeDeleted == null)
+            {
+                return Json(new {success  = false,message="Error While Deleting"});
+            }
+
+            var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, ProductToBeDeleted.ImageUrl.Trim('\\'));
+            if (System.IO.File.Exists(oldImagePath))
+            {
+                System.IO.File.Delete(oldImagePath);
+            }
+
+            _unitOfWork.Product.Remove(ProductToBeDeleted);
+            _unitOfWork.Save();
+            
+            return Json(new { success = true, message = "Delete Successfully" });
+        }
+
+        #endregion
+
     }
 }

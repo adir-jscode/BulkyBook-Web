@@ -23,15 +23,7 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            List<Product> objList = _unitOfWork.Product.GetAll().ToList();
-            IEnumerable<SelectListItem> CategoryList = _unitOfWork.Category.GetAll().Select(u =>
-            
-                new SelectListItem
-                {
-                Text = u.Name,
-                Value = u.CategoryId.ToString()
-                }
-                );
+            List<Product> objList = _unitOfWork.Product.GetAll(includeProperties : "Category").ToList();
 
             return View(objList);
         }
@@ -114,6 +106,20 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
                 {
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
                     string productPath = Path.Combine(wwwRootPath, @"images\product");
+
+                    if(!string.IsNullOrEmpty(productVM.Product.ImageUrl))
+                    {
+                        //delete old Image
+                        var oldImagePath = Path.Combine(wwwRootPath,productVM.Product.ImageUrl.Trim('\\'));
+
+                        if(System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+
+                    }
+
+
                     using (var FileSteam = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
                     {
                         file.CopyTo(FileSteam);
@@ -122,9 +128,16 @@ namespace BulkyBookWeb.Areas.Admin.Controllers
                     productVM.Product.ImageUrl = @"\images\product\" + fileName;
                 }
 
-                
+                if(productVM.Product.ProductId == 0)
+                {
+                    _unitOfWork.Product.Add(productVM.Product);
+                }
+                else
+                {
+                    _unitOfWork.Product.Update(productVM.Product);
+                }
 
-                _unitOfWork.Product.Add(productVM.Product);
+               
                 _unitOfWork.Save();
                 TempData["success"] = "Product Added Successfully";
                 return RedirectToAction("Index");

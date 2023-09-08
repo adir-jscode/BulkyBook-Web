@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FP08O4ar71yJN2Rn5qVQSQjGYJ1ZR+m7Ld6geJ0EGp0=",
+  "Hash": "xTcP1Bt5exR9LcGJkJcs07HKfTDKBXvbUffuUVngj8I=",
   "Source": "BulkyBookWeb",
   "BasePath": "_content/BulkyBookWeb",
   "Mode": "Default",
@@ -83,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\images\\product\\4995d7fa-ac65-44b2-bb74-2a382e8a14cc.jpg",
-      "SourceId": "BulkyBookWeb",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\",
-      "BasePath": "_content/BulkyBookWeb",
-      "RelativePath": "images/product/4995d7fa-ac65-44b2-bb74-2a382e8a14cc.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\4995d7fa-ac65-44b2-bb74-2a382e8a14cc.jpg"
     },
     {
       "Identity": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\images\\product\\49a3cb4a-f5d6-440e-9173-87bcb0dde705.jpg",
@@ -185,23 +168,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\d435c08b-80dc-4ece-89dc-994c1d7a7a03.jpg"
-    },
-    {
-      "Identity": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\images\\product\\eb4ab1cc-411f-4200-967b-b7e08e54e0a7.jpg",
-      "SourceId": "BulkyBookWeb",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\",
-      "BasePath": "_content/BulkyBookWeb",
-      "RelativePath": "images/product/eb4ab1cc-411f-4200-967b-b7e08e54e0a7.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\eb4ab1cc-411f-4200-967b-b7e08e54e0a7.jpg"
     },
     {
       "Identity": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\js\\product.js",

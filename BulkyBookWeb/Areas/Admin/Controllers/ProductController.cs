@@ -1,8 +1,10 @@
 ﻿using Bulky.DataAccess.Data;
 using Bulky.Models;
 using Bulky.Models.ViewModels;
+using Bulky.Utility;
 using BulkyBookWeb.Repository;
 using BulkyBookWeb.Repository.IRepository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json.Linq;
@@ -12,6 +14,7 @@ using static System.Net.Mime.MediaTypeNames;
 namespace BulkyBookWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles =SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

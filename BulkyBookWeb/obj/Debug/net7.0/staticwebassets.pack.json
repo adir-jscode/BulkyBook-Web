@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\images\\product\\d435c08b-80dc-4ece-89dc-994c1d7a7a03.jpg"
     },
     {
+      "Id": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\js\\company.js",
+      "PackagePath": "staticwebassets\\js\\company.js"
+    },
+    {
       "Id": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
     },

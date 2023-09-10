@@ -78,6 +78,9 @@ namespace Bulky.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PostalCode")
                         .HasColumnType("nvarchar(max)");
 
@@ -90,6 +93,38 @@ namespace Bulky.DataAccess.Migrations
                     b.HasKey("CompanyId");
 
                     b.ToTable("companies");
+
+                    b.HasData(
+                        new
+                        {
+                            CompanyId = 1,
+                            City = "Tech City",
+                            Name = "Tech Solution",
+                            PhoneNumber = "6669990000",
+                            PostalCode = "12121",
+                            State = "IL",
+                            StreetAddress = "123 Tech St"
+                        },
+                        new
+                        {
+                            CompanyId = 2,
+                            City = "Vid City",
+                            Name = "Vivid Books",
+                            PhoneNumber = "7779990000",
+                            PostalCode = "66666",
+                            State = "IL",
+                            StreetAddress = "999 Vid St"
+                        },
+                        new
+                        {
+                            CompanyId = 3,
+                            City = "Lala land",
+                            Name = "Readers Club",
+                            PhoneNumber = "1113335555",
+                            PostalCode = "99999",
+                            State = "NY",
+                            StreetAddress = "999 Main St"
+                        });
                 });
 
             modelBuilder.Entity("Bulky.Models.Product", b =>

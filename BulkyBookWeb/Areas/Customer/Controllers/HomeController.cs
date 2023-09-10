@@ -25,8 +25,15 @@ namespace BulkyBookWeb.Areas.Customer.Controllers
 
         public IActionResult Details(int? ProductId)
         {
-            Product product = _unitOfWork.Product.Get(u=>u.ProductId == ProductId, includeProperties: "Category");
-            return View(product);
+            ShoppingCart cart = new()
+            {
+                Product = _unitOfWork.Product.Get(u => u.ProductId == ProductId, includeProperties: "Category"),
+                Count =1,
+                ProductId = ProductId
+        };
+
+            
+            return View(cart);
         }
 
         public IActionResult Privacy()

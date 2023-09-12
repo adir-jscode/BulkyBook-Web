@@ -9,6 +9,10 @@
         IShoppingCartRepository ShoppingCart { get; }
 
         IApplicationUserRepository ApplicationUserRepository { get; }
+
+        IOrderHeaderRepository OrderHeader { get; }
+
+        IOrderDetailsRepository OrderDetails { get; }
         void Save();
 
     }

@@ -343,3 +343,4 @@ D:\BulkyBook-Web\BulkyBookWeb\bin\Debug\net7.0\Microsoft.Extensions.Identity.Sto
 D:\BulkyBook-Web\BulkyBookWeb\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 D:\BulkyBook-Web\BulkyBookWeb\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
 D:\BulkyBook-Web\BulkyBookWeb\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\BulkyBook-Web\BulkyBookWeb\bin\Debug\net7.0\Stripe.net.dll

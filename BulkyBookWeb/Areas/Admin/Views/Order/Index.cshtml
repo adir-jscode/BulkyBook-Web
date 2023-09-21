@@ -1,0 +1,86 @@
+﻿@model List<Product>
+
+@*@if(TempData["success"] !=null)
+{
+    <h2>@TempData["success"]</h2>
+}*@
+
+@*<partial name="_Notification" ></partial>*@
+
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-md-6">
+            <h1> Order List</h1>
+        </div>
+        
+    </div>
+</div>
+
+
+<table id="tblData" class="table table-bordered table-stripped">
+    <thead>
+        <tr>
+
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+                Email
+            </th>
+
+            <th>
+                Status
+            </th>
+            <th>
+                Total
+            </th>
+            <th>
+
+            </th>
+
+        </tr>
+    </thead>
+    @*<tbody>
+    @foreach (var obj in Model)
+    {
+    <tr>
+    <td>
+    @obj.Title
+    </td>
+    <td>
+    @obj.ISBN
+    </td>
+    <td>
+    @obj.Price
+    </td>
+    <td>
+    @obj.Author
+    </td>
+    <td>
+    @obj.Category.Name
+    </td>
+    <td>
+    <a asp-controller="Product" asp-action="Upsert" asp-route-Id="@obj.ProductId" class="btn btn-primary">
+    <i class="bi bi-pencil-square"></i> Edit
+    </a>
+    <a asp-controller="Product" asp-action="Delete" asp-route-Id="@obj.ProductId" class="btn btn-danger">
+    <i class="bi bi-trash"></i> Delete
+    </a>
+    </td>
+    </tr>
+    }
+    </tbody>*@
+
+
+
+</table>
+@section Scripts {
+    <script src="~/js/order.js"></script>
+                    }
+

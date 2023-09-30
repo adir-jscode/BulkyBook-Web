@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\js\\company.js"
     },
     {
+      "Id": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\js\\order.js",
+      "PackagePath": "staticwebassets\\js\\order.js"
+    },
+    {
       "Id": "D:\\BulkyBook-Web\\BulkyBookWeb\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
     },
